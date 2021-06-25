@@ -1,0 +1,21 @@
+{
+    "name": "Chrome Extension Drag",
+    "version": "0.0.1",
+    "description": "Drag",
+    "manifest_version" : 3,
+    "background": {
+        "service_worker": "/src/background/background.ts"
+    },
+    "incognito": "split",
+    "permissions": [
+       "storage", "activeTab"
+    ],
+    "icons": {
+        "16": "/assets/get_started16.png"
+    },
+    "action": {
+        "default_icon": {
+            "16" : "/assets/get_started16.png"
+        }
+    }
+}

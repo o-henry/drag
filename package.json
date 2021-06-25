@@ -1,0 +1,35 @@
+{
+  "name": "drag",
+  "version": "0.0.1",
+  "description": "Chrome Extension Drag",
+  "main": "index.js",
+  "scripts": {
+    "build:main": "parcel build src/*/*.ts -d dist/*",
+    "build": "npm run build:main",
+    "clean": "rimraf dist",
+    "dist": "npm run clean && npm run build",
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "test": "jest --watch"
+  },
+  "repository": "https://github.com/o-henry/drag.git",
+  "author": "henry <c.henry.9209@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/chrome": "^0.0.145",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "babel-jest": "^27.0.5",
+    "eslint": "^7.29.0",
+    "jest": "^27.0.5",
+    "jest-chrome": "^0.7.1",
+    "parcel-bundler": "^1.12.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4"
+  }
+}
