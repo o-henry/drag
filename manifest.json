@@ -1,21 +1,30 @@
 {
-    "name": "Chrome Extension Drag",
+    "name": "Drag",
     "version": "0.0.1",
     "description": "Drag",
     "manifest_version" : 3,
     "background": {
-        "service_worker": "/src/background/background.ts"
+        "service_worker": "./background.js"
     },
-    "incognito": "split",
-    "permissions": [
-       "storage", "activeTab"
+    "permissions": ["activeTab", "scripting", "tabs", "storage"],
+    "host_permissions": [
+        "https://www.google.com",
+        "<all_urls>",
+        "*://*/*"
     ],
-    "icons": {
-        "16": "/assets/get_started16.png"
-    },
     "action": {
+        "default_popup": "/src/pop-up/popup.html ",
         "default_icon": {
-            "16" : "/assets/get_started16.png"
+            "16": "/assets/get_started16.png",
+            "32": "/assets/get_started32.png",
+            "48": "/assets/get_started48.png",
+            "128": "/assets/get_started128.png"
         }
+    },
+    "icons": {
+        "16": "/assets/get_started16.png",
+        "32": "/assets/get_started32.png",
+        "48": "/assets/get_started48.png",
+        "128": "/assets/get_started128.png"
     }
 }
