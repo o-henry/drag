@@ -1,10 +1,10 @@
 {
     "name": "Drag",
     "version": "0.0.1",
-    "description": "Drag",
+    "description": "Gets content from browser",
     "manifest_version" : 3,
     "background": {
-        "service_worker": "./background.js"
+        "service_worker": "background.js"
     },
     "permissions": ["activeTab", "scripting", "tabs", "storage"],
     "host_permissions": [
