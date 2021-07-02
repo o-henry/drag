@@ -6,16 +6,26 @@ document.addEventListener('mouseup', () => {
     ? window.getSelection()
     : document.selection.createRange();
 
-  if (select) {
-    /* this feature is obsolete but
-     * https://github.com/yabwe/medium-editor/blob/master/src/js/core.js#L47
-     * https://github.com/codex-team/editor.js/blob/master/src/components/inline-tools/inline-tool-bold.ts#L73
-     * https://imgur.com/a/Y90otfU
-     * are using it.
-     * */
+  /** 'execCommand' this feature is obsolete but
+   * https://github.com/yabwe/medium-editor/blob/master/src/js/core.js#L47
+   * https://github.com/codex-team/editor.js/blob/master/src/components/inline-tools/inline-tool-bold.ts#L73
+   * https://imgur.com/a/Y90otfU
+   * are using it.
+   * */
 
-    window.document.designMode = 'On';
-    window.document.execCommand('hiliteColor', false, 'yellow');
+  if (select) {
+    let select_position = select.getRangeAt(0).startOffset;
+
+    console.log(select.getRangeAt(0));
+
+    document.designMode = 'On';
+    document.execCommand('hiliteColor', false, '#FFF28C');
+
+    if (select.getRangeAt(0).startOffset === select_position) {
+      document.execCommand('RemoveFormat', false, null);
+    }
+
+    document.designMode = 'Off';
   }
 
   if (select.toString().length) {
