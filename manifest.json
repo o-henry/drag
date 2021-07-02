@@ -9,7 +9,8 @@
     "content_scripts": [
         { 
             "matches": ["<all_urls>"],
-            "js": ["/src/content/highlight.js"] 
+            "js": ["/src/content/highlight.js"] ,
+            "css": ["/src/content/highlight.css"]
         }
     ],
     "permissions": ["activeTab", "scripting", "tabs", "storage"],

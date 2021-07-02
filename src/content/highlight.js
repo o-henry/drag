@@ -3,17 +3,14 @@
  */
 
 document.addEventListener('mouseup', (event) => {
-  let select = window.getSelection();
-  document.designMode = 'on';
+  let select = window.getSelection().toString();
 
-  document.execCommand('ForeColor', false, 'red');
-  document.designMode = 'off';
+  if (select.length)
+    chrome.runtime.sendMessage(
+      { message: 'text', data: select },
 
-  console.log('select', select.toString());
-
-  if (select)
-    chrome.runtime.onMessage(
-      { message: 'text', data: select.toString() },
-      function (response) {},
+      // function (response) {
+      //   console.log('response', response);
+      // },
     );
 });
