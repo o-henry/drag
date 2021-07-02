@@ -1,5 +1,6 @@
 /**
  * Inject drag into the current page
+ * https://javascript.info/selection-range
  */
 document.addEventListener('mouseup', () => {
   let select = window.getSelection
