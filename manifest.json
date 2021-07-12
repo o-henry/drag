@@ -9,7 +9,7 @@
     "content_scripts": [
         { 
             "matches": ["<all_urls>"],
-            "js": ["/src/content/highlight.js", "/src/utils/set-cookie.js"] ,
+            "js": ["/src/content/highlight.js", "/src/utils/set-cookie.js"],
             "css": ["/src/content/highlight.css"]
         }
     ],
