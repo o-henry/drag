@@ -13,7 +13,7 @@
             "css": ["/src/content/highlight.css"]
         }
     ],
-    "permissions": ["activeTab", "scripting", "tabs", "storage"],
+    "permissions": [],
     "host_permissions": [
         "https://www.google.com",
         "<all_urls>",
